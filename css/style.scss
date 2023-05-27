@@ -1,0 +1,1129 @@
+$boja1:#080808;
+$boja2:#171717;
+$boja3:#05D0EB;
+$boja4:#ffffff;
+$sirina100: 100%;
+
+@mixin sirina-boja{
+    background-color: $boja1;
+    width: $sirina100;
+}
+
+@mixin flex{
+    display: flex;
+    justify-content: space-around;
+}
+
+@mixin naslovA{
+    width: 250px;
+    height: 70px;
+    margin: 0px auto;
+    border-right: 5px solid #05D0EB;
+    text-align: center;
+    padding-top: 15px;
+    margin-bottom: 70px;
+}
+
+@mixin h1NaslovA{
+    font-size: 40px;
+    color:$boja4;
+    letter-spacing: 1.5px;
+}
+
+@mixin ikonice{
+    font-size: 190px;
+    color: $boja3;
+    margin-top: 30px;
+
+}
+
+@font-face {
+    font-family: myFont;
+    src: url("../font/Arvo-Regular.ttf");
+}
+
+@keyframes desno{
+    from {left:-600px}
+    to{left:0px}
+}
+
+@keyframes animacija {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10%);
+    }
+    100% {
+      transform: translateY(0);
+    }}
+    
+.cleaner{
+    clear: both;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: myFont;
+    scroll-behavior: smooth;
+}
+
+
+
+/* HEADER */
+header{
+    width:100%;
+    height: 950px;
+    background-color: $boja2;
+    
+    #gore{
+        @include sirina-boja();
+        height: 15%;
+        padding-top: 20px;
+
+        #logo{
+            width: 100px;
+            height: 100px;
+            float: left;
+            margin-left: 150px;
+            margin-top: 10px;
+            
+            img{
+                width: $sirina100;
+                height: $sirina100;
+            }
+        }
+
+        nav{
+            float: right;
+            width: 800px;
+            height: 80%;
+            margin-right: 100px;
+
+            ul{
+                list-style-type: none;
+                margin-top: 35px;
+
+                li{
+                    display: inline;
+                    margin-right: 6vh;
+
+                    a{
+                        text-decoration: none;
+                        font-size: 35px;
+                        color:$boja4;
+                    }
+
+                    a:hover{
+                        text-decoration: underline;
+                        color: $boja3;
+                        transition: 1.5s;
+                    }
+                }
+            }
+
+
+        }
+    }
+
+    #dole{
+        width: $sirina100;
+        height: 82.9%;
+        @include flex();
+
+        #slikaH{
+            position: relative;
+            width: 45%;
+            height: 90%;
+            margin-top: 2.5%;
+            border-left: 4px solid $boja4;
+            background-image: url("../slike/sasa.jpg");
+            background-repeat: no-repeat;
+            background-size: 85% 100%;
+            background-position: 50px;
+             animation: desno 2s;
+        }
+
+        #tekstH{
+            width: 50%;
+            height: 100%;
+            border-left: 4px solid $boja3;
+            
+            #prozor{
+                width: 50%;
+                height: 50%;
+                float: right;
+                background-color: $boja4;
+                margin: 50px 50px 0px 0px;
+                border-radius: 5%;
+
+                h1{
+                    font-size: 40px;
+                    color: $boja1;
+                    margin-top: 70px;
+                    margin-left: 20px;
+                }
+
+
+            h2{
+                font-size: 40px;
+                color: $boja3;
+                margin-top: 40px;
+                margin-left: 20px;
+            
+                 }
+            }
+
+            #strelica{
+                width: $sirina100;
+                height: 150px;
+                margin-top: 60%;
+                text-align: center;
+
+                .fa-solid{
+                    font-size: 70px;
+                    color: $boja4;
+                    margin-top: 50px;
+                    animation-name: animacija;
+                    animation-duration: 1.5s;
+                    animation-iteration-count: infinite;
+                }
+            
+            }
+        }
+    }
+}
+
+
+.prelaz{
+    @include sirina-boja();
+    height: 80px;
+    padding-top: 40px;
+
+    ul{
+        list-style-type: none;
+        margin-left: 45%;
+
+        li{
+            display: inline;
+            margin: 0px 14px;
+
+            a{
+                text-decoration: none;
+                color: #fff;
+                font-size: 30px;
+            }
+        }
+
+          
+    }
+}  
+
+
+
+/* SERVICES DEO */
+
+#services{
+    width: $sirina100;
+    height: 1000px;
+    background-color: $boja2;
+    padding-top: 70px;
+
+    .naslov{
+        @include naslovA();
+        background-color: $boja1;
+
+        h1{
+            @include h1NaslovA();
+        }
+    }
+
+    #kontentS{
+        width: 95%;
+        height: 800px;
+        background-color: $boja1;
+        margin: 0px auto;
+        @include flex();
+
+        .isti{
+            width: 22%;
+            height: 90%;
+            background-color:$boja2;
+            margin-top: 2.5%;
+            border-bottom: 4px solid $boja4;
+            border-right: 4px solid $boja3;
+            text-align: center;
+
+            h2{
+                font-size: 50px;
+                color:$boja3;
+                margin-top: 40px;
+            
+            }
+
+            .fa-brands{
+                @include ikonice();
+            }
+
+            .fa-solid{
+                @include ikonice();
+            }
+
+            p{
+                font-size: 30px;
+                color:$boja4;
+                margin: 30px 10px 0px 10px;
+            }
+        }
+
+    }    
+}   
+
+/* PROJECTS */
+
+#projects{
+    width: $sirina100;
+    height: 900px;
+    background-color:$boja1;
+    padding-top: 70px;
+
+    .naslov1{
+        @include naslovA();
+        background-color: $boja2;
+
+        h1{
+            @include h1NaslovA();
+        }
+    }
+
+    #projekti{
+        width: 90%;
+        height: 650px;
+        background-color: $boja2;
+        margin: 0px auto;
+        @include flex();
+
+        .proj{
+            width: 45%;
+            height: 65%;
+            background-color: $boja1;
+            margin-top: 7.5%;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            border: 3px solid $boja4;
+
+            &:hover{
+                .tamnije{
+                    display: block;
+                }
+            }
+                .tamnije{
+                    width: $sirina100;
+                    height: $sirina100;
+                    background-color: rgba(0,0,0, 0.7);
+                    display: none;
+
+                    .button{
+                        background-color: #05D0EB; 
+                        border: none;
+                        color: white;
+                        padding: 18px 50px;
+                        text-align: center;
+                        text-decoration: none;
+                        border: 3px solid white;
+                        font-size: 20px;
+                        margin-top: 250px;
+                        margin-left: 310px;
+                        display: none;
+                      }
+        
+                    &:hover{
+                        
+                        .button{
+                            display: inline-block;
+                        }
+                    }
+                }
+            } 
+        }
+
+        #levo{
+            background-image: url("../slike/sajt.png");
+        }
+
+        #desno{
+            background-image: url("../slike/sajt2.png");
+        }
+        
+}
+
+
+
+
+/* ABOUT DEO */
+
+#about{
+    width: $sirina100;
+    height: 800px;
+    background-color: $boja2;
+    padding-top: 70px;
+
+    .naslov{
+        @include naslovA();
+        background-color: $boja1;
+        h1{
+            @include h1NaslovA();
+
+        }
+    }
+
+    #autor{
+        width: $sirina100;
+        height: 600px;
+        @include flex();
+
+        #slika{
+            width: 25%;
+            height: 90%;
+            background-image: url("../slike/autor.jpg");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            margin-top: 1.5%;
+            
+        }
+
+        .tab{
+            width: 30%;
+            height: 70%;
+            margin-top: 4.5%;
+
+            table{
+                width: $sirina100;
+                height: $sirina100;
+                font-size: 20px;
+                color: $boja4;
+
+                .taj{
+                    background-color: $boja1;
+                    height: 70px;
+                    text-align: center;
+                    border-right: 4px solid $boja3;
+                
+                }
+            }
+        }
+
+    }
+}
+
+
+#contact{
+    width: $sirina100;
+    height: 900px;
+    background-color: $boja2;
+    padding-top: 70px;
+
+    .naslov{
+        @include naslovA();
+        background-color: $boja1;
+        h1{
+            @include h1NaslovA();
+        }
+    }
+
+    #kontentCon{
+        width: $sirina100;
+        height: 75%;
+        @include flex();
+        flex-wrap: wrap;
+
+        #forma{
+            width: 45%;
+            height: 90%;
+            
+            #f1{
+                width: $sirina100;
+                height: $sirina100;
+                text-align: center;
+                font-size: 20px;
+                color: $boja4;
+
+                input[type="text"],input[type="tel"],input[type="email"],input[type="submit"]{
+                    width: 99%;
+                    height: 30px;
+                    margin-top: 10px;
+
+                    
+            }
+
+            input[type="submit"]{
+                width: $sirina100;
+                margin-top: 10px;
+                height: 50px;
+                background-color: $boja3;
+                color: $boja4;
+                font-size: 20px;
+            }
+
+            textarea{
+                width: 99%;
+                height: 170px;
+                font-size: 20px;
+                text-align: center;
+                
+                }
+            }
+        }
+        #linkovi{
+            width: 90%;
+            height: 100px;
+            
+            ul{
+                list-style-type: none;
+                margin-left: 630px;
+                margin-top: 30px;
+
+                li{
+                    display: inline;
+                    margin:0px 20px 0px 20px;
+
+                    a{
+                        text-decoration: none;
+                        font-size: 50px;
+                        color:$boja3;
+                    }
+            
+                }
+            }
+
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 1441px){
+    header{
+        #gore{
+            nav{
+                margin-right: 0px;
+                width: 750px;
+                ul{
+                    li{
+                        margin-right: 4vh;
+                    }
+                }
+            }
+        }
+
+        #dole{
+            #tekstH{
+                #strelica{
+                    margin-top: 80%;
+                }
+            
+                
+            }
+        }
+    }
+
+
+    #services{
+        #kontentS{
+            .isti{
+                h2{
+                    margin-top: 25px;
+                }
+                p{
+                    font-size: 25px;
+                    
+                }
+            }
+        }
+    }
+
+    #projects{
+        #projekti{
+            .proj{
+                .tamnije{
+                    .button{
+                        margin-left: 210px;
+                    }
+                }
+            }
+        }
+    }
+
+    #contact{
+        #kontentCon{
+            #linkovi{
+                ul{
+                    margin-left: 415px;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+@media screen and (max-width: 1025px){
+    header{
+        #gore{
+            nav{
+                width: 650px;
+                ul{
+                    li{
+                        a{
+                            font-size: 30px;
+                        }
+                    }
+                }
+            }
+
+            #logo{
+                margin-left: 20px;
+            }
+        }
+
+        #dole{
+            #tekstH{
+                #prozor{
+                    width: 80%;
+                }
+
+                #strelica{
+                    margin-top: 110%;
+                }
+            }
+        }
+    }
+
+    .prelaz{
+        ul{
+            margin-left: 40%;
+        }
+    }
+
+    #services{
+        #kontentS{
+            flex-wrap: wrap;
+            .isti{
+                width: 45%;
+                height: 45%;
+                .fa-brands{
+                    font-size: 100px;
+                    margin-top: 10px;
+                }
+
+                .fa-solid{
+                    font-size: 100px;
+                    margin-top: 15px;
+                }
+
+                h2{
+                    font-size: 30px;
+                    margin-top: 15px;
+                }
+
+                p{
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+    #projects{
+        height: 860px;
+
+        #projekti{
+            height: 600px;
+
+            .proj{
+                height: 70%;
+                .tamnije{
+                    .button{
+                        padding: 15px 40px;
+                        margin-left: 135px;
+                        margin-top: 270px;
+                    }
+                }
+            }
+        }
+    }
+
+    #about{
+         height: 1000px;
+        #autor{
+            height: 800px;
+            flex-wrap: wrap;
+            #slika{
+                width: 100%;
+                height: 45%;
+                background-size: 40% 100%;
+                background-position: 290px;
+            }
+
+            .tab{
+                width: 45%;
+                height: 45%;
+                table{
+                    font-size: 19px;
+                }
+            }
+        }
+    }
+
+    #contact{
+        #kontentCon{
+            #linkovi{
+                ul{
+                    margin-left: 225px;
+                }
+            }
+        }
+    }
+
+}
+
+
+@media screen and (max-width: 921px){
+    #projects{
+        height: 1200px;
+        #projekti{
+            height: 950px;
+            flex-wrap: wrap;
+            .proj{
+                width: 90%;
+                height: 45%;
+                margin-top: 2.5%;
+                .tamnije{
+                    .button{
+                        padding: 15px 45px;
+                        margin-left: 290px;
+                    }
+                }
+            }
+        }
+    }
+
+    #contact{
+        #kontentCon{
+            #forma{
+                width: 60%;
+            }
+
+            #linkovi{
+                ul{
+                    margin-left: 185px;
+                }
+            }
+        }
+
+    }
+}
+
+@media screen and (max-width: 768px){
+
+    header{
+        #gore{
+            nav{
+                width: 550px;
+                ul{
+                    li{
+                        a{
+                            font-size: 25px;
+                        }
+                    }
+                }
+            }
+        }
+
+        #dole{
+            #slikaH{
+                border-left: none;
+                background-size: 100% 100%;
+                background-position: 0px;
+            }
+
+            #tekstH{
+                #prozor{
+                    h1{
+                        margin-top: 25px;
+                    }
+                }
+
+                #strelica{
+                    margin-top: 150%;
+                }
+            }
+        }
+    }
+
+    .prelaz{
+        ul{
+            margin-left: 36%;
+        }
+    }
+
+    #services{
+        #kontentS{
+            .isti{
+                p{
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+    #projects{
+        #projekti{
+            .proj{
+                .tamnije{
+                    .button{
+                        margin-left: 230px;
+                    }
+                }
+            }
+        }
+    }
+
+    #about{
+        height: 1400px;
+        #autor{
+            height: 1200px;
+            #slika{
+                background-position: 225px;
+                height: 30%;
+            }
+
+            .tab{
+                width: 90%;
+                height: 30%;
+            }
+        }
+    }
+
+    #contact{
+        #kontentCon{
+            #forma{
+               width: 70%;
+            }
+            #linkovi{
+                ul{
+                    margin-left: 110px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 481px){
+    
+    header{
+        #gore{
+            padding-top: 0px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            #logo{
+                width: 20%;
+                height: 40%;
+                margin-left: 10px;
+            }
+            nav{
+                width: 100%;
+                height: 50%;
+                ul{
+                    margin-right: 0px;
+                    li{
+                        margin-left: 10px;
+                        a{
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+
+        #dole{
+            flex-wrap: wrap;
+
+            #slikaH{
+                width: 90%;
+                height: 45%;
+                order:2;
+            }
+
+            #tekstH{
+                width: 90%;
+                height: 45%;
+                order:1;
+                border-left: none;
+
+                #prozor{
+                    height: 90%;
+                    width: 90%;
+                   margin: 30px 20px 0px 0px;
+                }
+
+                #strelica{
+                    display: none;
+                }
+                
+                
+            }
+        }
+    }
+
+    .prelaz{
+        ul{
+            margin-left: 120px;
+        }
+    }
+
+    #services{
+        height: 1400px;
+        #kontentS{
+                height: 1200px;
+            .isti{
+                width: 90%;
+                height: 23%;
+                .fa-brands{
+                    font-size: 70px;
+                }
+
+                .fa-solid{
+                    font-size: 70px;
+                }
+
+                h2{
+                    font-size: 25px;
+                }
+
+                p{
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    #projects{
+        #projekti{
+            width: 100%;
+            .proj{
+                width: 98%;
+                .tamnije{
+                    .button{
+                        padding: 10px 25px;
+                        margin-left: 175px;
+                    }
+                }
+                
+            }
+        }
+    }
+
+    #about{
+        #autor{
+            #slika{
+                background-position: 140px;
+                
+            }
+
+            .tab{
+                table{
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+
+    #contact{
+        #kontentCon{
+            #forma{
+                width: 90%;
+            }
+
+            #linkovi{
+                ul{
+                   margin-left: 25px;
+                    li{
+                        margin: 0px 10px 0px 10px;
+                    }
+                }
+            }
+        }
+
+        
+    }
+}
+
+@media screen and (max-width: 426px){
+    header{
+        #gore{
+            nav{
+                ul{
+                    li{
+                        margin:0px 18px 0px 18px;
+                        a{
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+        }
+        #dole{
+            #tekstH{
+                #prozor{
+                    h1{
+                        font-size: 30px;
+                        margin-top: 30px;
+                    }
+
+                    h2{
+                        font-size: 30px;
+                        margin-top: 30px;
+                    }
+                }
+            }
+        }
+    }
+
+    .prelaz{
+        ul{
+            margin-left:100px ;
+        }
+    }
+
+    #services{
+        #kontentS{
+            .isti{
+                p{
+                    margin-top: 15px;
+                }
+            }
+        }
+    }
+
+    #projects{
+        #projekti{
+            .proj{
+                .tamnije{
+                    .button{
+                        margin-left: 146px;
+                    }
+                }
+            }
+        }            
+    }       
+    
+    #about{
+        #autor{
+            #slika{
+                background-size: 60% 100%;
+                background-position: 82px;
+            }
+        }
+    }
+
+    #contact{
+        #kontentCon{
+            #linkovi{
+                ul{
+                    li{
+                        a{
+                            font-size: 40px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+} 
+
+@media screen and (max-width: 376px){
+    header{
+        #gore{
+            nav{
+                ul{
+                    li{
+                        margin: 0px 14px 0px 14px;
+                        
+                    }
+                }
+            }
+        }
+
+        #dole{
+            #tekstH{
+                #prozor{
+                    h1{
+                        margin-left: 10px;
+                    }
+
+                    h2{
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    .prelaz{
+        ul{
+            margin-left: 80px;
+        }
+    }
+
+    #services{
+        #kontentS{
+            .isti{
+                p{
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+
+    #projects{
+        #projekti{
+            .proj{
+                .tamnije{
+                    .button{
+                        margin-left: 120px;
+                    }
+                }
+            }
+        }
+    }
+
+    #about{
+        #autor{
+            #slika{
+                background-position: 70px;
+            }
+        }
+    }
+
+    #contact{
+        #kontentCon{
+            #linkovi{
+                ul{
+                    
+                    li{
+                        
+                        a{
+                            font-size: 35px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}
