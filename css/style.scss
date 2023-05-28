@@ -501,7 +501,29 @@ header{
     }
 }
 
+@media screen and (max-width: 1860px){
+    #services{
+        #kontentS{
+            .isti{
+                p{
+                    font-size: 28px;
+                }
+            }
+        }
+    }
+}
 
+@media screen and (max-width: 1685px){
+    #services{
+        #kontentS{
+            .isti{
+                p{
+                    font-size: 24.5px;
+                }
+            }
+        }
+    }
+}
 
 @media screen and (max-width: 1441px){
     header{
@@ -535,10 +557,7 @@ header{
                 h2{
                     margin-top: 25px;
                 }
-                p{
-                    font-size: 25px;
-                    
-                }
+                
             }
         }
     }
@@ -568,7 +587,56 @@ header{
 
 
 
+@media screen and (max-width: 1260px){
+    header{
+        #dole{
+            #tekstH{
+                #prozor{
+                    width: 55%;
+                    h1{
+                        margin-top: 30px;
+                        font-size: 37px;
+                    }
 
+                    h2{
+                        font-size: 37px;
+                    }
+                }
+
+                #strelica{
+                    margin-top: 100%;
+                }
+            }
+        }
+    }
+
+   #services{
+    #kontentS{
+        .isti{
+            p{
+                margin-top: 20px;
+                font-size: 23px;
+            }
+
+            h2{
+                font-size: 35px;
+                margin-top: 20px;
+            }
+
+            .fa-brands{
+                font-size: 150px;
+            }
+
+            .fa-solid{
+                font-size: 130px;
+                margin-top: 20px;
+            }
+        }
+    }
+   }
+
+    
+}
 
 
 @media screen and (max-width: 1025px){
@@ -821,6 +889,8 @@ header{
         }
     }
 }
+
+
 
 @media screen and (max-width: 481px){
     
